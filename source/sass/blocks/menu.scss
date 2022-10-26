@@ -13,15 +13,14 @@
     align-items: center;
 
     @media (max-width: 1023px) {
-      width: 80px;
-      margin-right: 27px;
-      // padding-bottom: 14px;
+      width: 93px;
+      padding: 0 13px 16px 0;
     }
 
-    @media (max-width: 1023px) {
-      width: 80px;
-      // margin-right: 0;
-      // padding-bottom: 0;
+    @media (max-width: 767px) {
+      width: 85px;
+      margin: 0;
+      padding: 0 6px 3px 0;
     }
   }
 
