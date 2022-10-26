@@ -1,0 +1,40 @@
+.features {
+  background-color: $color-whisper;
+  margin: 0;
+  padding-top: 120px;
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__item {
+    width: 595px;
+    min-height: 300px;
+    padding: 40px 0 0 45px;
+    border: 1px solid $color-whisper;
+    border-left: 5px solid $color-deep-sky-blue;
+  }
+
+  &__heading {
+    font: {
+      family: $roboto-condensed-regular;
+      size: 24px;
+      weight: 400;
+    }
+    line-height: 34px;
+    color: $color-deep-sky-blue;
+    padding: 20px 0 15px;
+  }
+
+  &__text {
+    font: {
+      family: $ptmono-regular;
+      size: 16px;
+      weight: 400;
+    }
+    line-height: 22px;
+    color: $color-black-pearl;
+  }
+}
