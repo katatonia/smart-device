@@ -3,23 +3,25 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  padding: 0 54px 0 7px;
 
   &__contacts {
     width: 460px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
 
     @media (max-width: 1023px) {
       width: 80px;
       margin-right: 27px;
-      padding-bottom: 14px;
+      // padding-bottom: 14px;
     }
 
     @media (max-width: 1023px) {
       width: 80px;
-      margin-right: 0;
-      padding-bottom: 0;
+      // margin-right: 0;
+      // padding-bottom: 0;
     }
   }
 
@@ -45,12 +47,17 @@
     text-transform: uppercase;
     border: 1px solid $color-alice-blue;
     padding: 10px 15px;
-    margin-right: 60px;
     background-color: transparent;
 
     @media (max-width: 1023px) {
       display: none;
     }
+  }
+
+  &__email-icon,
+  &__phone-icon {
+    width: 20px;
+    height: 20px;
   }
 }
 

@@ -1,14 +1,35 @@
-.promo {
-  min-height: 880px;
-  padding-bottom: 280px;
-  background: url("../../img/promo-bg.jpg") center (center/cover) no-repeat;
-  background-color: $color-black-pearl;
+.ibg {
+  position: relative;
+}
 
+.ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.promo__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.promo {
+  // min-height: 880px;
+  // padding-bottom: 280px;
+  // background: url("../../img/promo-bg.jpg") center (center/cover) no-repeat;
+  // background-color: $color-black-pearl;
+  position: relative;
   &__wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 185px;
+    // margin-top: 185px;
   }
 
   &__title {

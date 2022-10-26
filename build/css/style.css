@@ -758,11 +758,30 @@ button,
   pointer-events: auto;
 }
 
+.ibg {
+  position: relative;
+}
+
+.ibg img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.promo__bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
 .promo {
-  min-height: 880px;
-  padding-bottom: 280px;
-  background: url("../../img/promo-bg.jpg") center center/cover no-repeat;
-  background-color: #041827;
+  position: relative;
 }
 
 .promo__wrapper {
@@ -776,7 +795,6 @@ button,
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
-  margin-top: 185px;
 }
 
 .promo__title {
@@ -810,10 +828,15 @@ button,
 }
 
 .header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
   padding: 28px 0 35px;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(84.9%, #041827), to(rgba(4, 24, 39, 0)));
   background: -o-linear-gradient(top, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
   background: linear-gradient(180deg, #041827 84.9%, rgba(4, 24, 39, 0) 100%);
+  z-index: 1;
 }
 
 .menu {
@@ -828,6 +851,7 @@ button,
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  padding: 0 54px 0 7px;
 }
 
 .menu__contacts {
@@ -840,6 +864,9 @@ button,
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .menu__text {
@@ -858,8 +885,13 @@ button,
   text-transform: uppercase;
   border: 1px solid #f2f5f6;
   padding: 10px 15px;
-  margin-right: 60px;
   background-color: transparent;
+}
+
+.menu__email-icon,
+.menu__phone-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .menu__logo {
@@ -975,13 +1007,10 @@ button,
   .menu__contacts {
     width: 80px;
     margin-right: 27px;
-    padding-bottom: 14px;
   }
 
   .menu__contacts {
     width: 80px;
-    margin-right: 0;
-    padding-bottom: 0;
   }
 
   .menu__text {
