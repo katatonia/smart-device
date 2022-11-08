@@ -74,6 +74,105 @@
   }
 }
 
+// form
+@mixin form-text {
+  font: {
+    family: $ptmono-regular;
+    size: 16px;
+    weight: 400;
+  }
+  line-height: 21px;
+  color: $color-default-white;
+}
+
+@mixin form-template {
+  &__input {
+    @include form-text;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    background-color: $color-pacific-blue;
+    padding: 15px 0 15px 15px;
+
+    &--name {
+      grid-area: name;
+    }
+
+    &--tel {
+      grid-area: tel;
+    }
+
+    &::placeholder {
+      @include form-text;
+    }
+  }
+
+  &__textarea {
+    font: {
+      size: 16px;
+      weight: 400;
+    }
+    line-height: 21px;
+    color: $color-default-white;
+    background-color: $color-pacific-blue;
+    grid-area: text;
+    padding: 25px 0 88px 15px;
+    border: 0;
+    border-radius: 3px;
+
+    &::placeholder {
+      @include form-text;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    font: {
+      family: $roboto-condensed-bold;
+      weight: 700;
+      size: 16px;
+    }
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    color: $color-default-white;
+    padding: 15px 25px;
+    background-color: $color-black-pearl;
+    border-radius: 3px;
+    grid-area: btn;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  &__agree {
+    @include form-text;
+    grid-area: agree;
+    position: relative;
+    font-size: 14px;
+    line-height: 16px;
+    padding-left: 37px;
+
+    input {
+      position: absolute;
+      appearance: none;
+    }
+
+    @media (max-width: 1023px) {
+      padding-top: 10px;
+      margin-top: 0;
+    }
+
+    @media (max-width: 767px) {
+      padding: 0 0 0 32px;
+    }
+  }
+}
+
+// no JS
+
+@mixin is-hidden {
+  display: none;
+}
+
 // Mobile first
 
 // @mixin vp-375 {

@@ -1,5 +1,10 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {showMore} from './modules/modals/show-more';
+import {scrollToFeedback} from './modules/modals/scroll-to';
+import {createMask} from './modules/modals/mask';
+import {openAccordion} from './modules/modals/accordion';
+import {openModal, closeModal} from './modules/modals/modal';
 
 // ---------------------------------
 
@@ -11,7 +16,12 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
 
   // Modules
-  // ---------------------------------
+  showMore();
+  scrollToFeedback();
+  createMask();
+  openAccordion();
+  openModal();
+  closeModal();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
@@ -34,7 +44,7 @@ window.addEventListener('DOMContentLoaded', () => {
 // url до иконок пинов карты, настройки автопрокрутки слайдера, url к json и т.д.
 
 // для адаптивного JS используется matchMedia и addListener
-// const breakpoint = window.matchMedia(`(min-width:1024px)`);
+// const maxWidth = window.matchMedia(`(min-width:1024px)`);
 // const breakpointChecker = () => {
 //   if (breakpoint.matches) {
 //   } else {

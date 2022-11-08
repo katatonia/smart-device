@@ -1,0 +1,10 @@
+.site-list {
+  @media (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    &__col-2 {
+      padding-left: 40px;
+    }
+  }
+}

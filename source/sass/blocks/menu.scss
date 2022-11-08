@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  padding: 0 54px 0 7px;
+  padding: 0 60px 0 0;
 
   &__contacts {
     width: 460px;
@@ -13,14 +13,14 @@
     align-items: center;
 
     @media (max-width: 1023px) {
-      width: 93px;
-      padding: 0 13px 16px 0;
+      padding: 0 46px 16px 0;
+      width: 125px;
     }
 
     @media (max-width: 767px) {
-      width: 85px;
+      width: 100px;
       margin: 0;
-      padding: 0 6px 3px 0;
+      padding: 0 20px 4px 0;
     }
   }
 
@@ -33,6 +33,10 @@
     line-height: 18px;
     color: $color-alice-blue;
     padding-left: 15px;
+
+    @include hover-focus {
+      color: $color-school-bus-yellow;
+    }
 
     @media (max-width: 1023px) {
       display: none;
@@ -47,9 +51,15 @@
     border: 1px solid $color-alice-blue;
     padding: 10px 15px;
     background-color: transparent;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+
+    @include hover-focus {
+      color: $color-school-bus-yellow;
+    }
 
     @media (max-width: 1023px) {
-      display: none;
+      @include is-hidden;
     }
   }
 
@@ -57,11 +67,18 @@
   &__phone-icon {
     width: 20px;
     height: 20px;
+    fill: $color-deep-sky-blue;
+
+    @include hover-focus {
+      fill: $color-school-bus-yellow;
+    }
   }
 }
 
 .menu__logo {
   width: 215px;
+  display: flex;
+  align-items: center;
 
   @media (max-width: 767px) {
     width: 35px;
@@ -70,9 +87,4 @@
   img {
     width: 100%;
   }
-}
-
-.menu a {
-  display: flex;
-  align-items: center;
 }
