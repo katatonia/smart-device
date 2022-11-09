@@ -34,7 +34,7 @@ const createElementsArr = () => {
 
 const openModal = () => {
   menuBtn.addEventListener('click', (e) => {
-    if (modal !== null) {
+    if (modal) {
       e.preventDefault();
       modal.classList.add('is-active');
       body.style.overflow = 'hidden';
@@ -48,11 +48,13 @@ const openModal = () => {
 };
 
 const closeModal = () => {
-  closeBtn.addEventListener('click', () => {
-    modal.classList.remove('is-active');
-    body.style.overflow = 'visible';
-    setTabindex(createElementsArr(), 0);
-  });
+  if (closeBtn) {
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('is-active');
+      body.style.overflow = 'visible';
+      setTabindex(createElementsArr(), 0);
+    });
+  }
   window.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && modal.classList.contains('is-active')) {
       modal.classList.remove('is-active');
@@ -60,11 +62,13 @@ const closeModal = () => {
       setTabindex(createElementsArr(), 0);
     }
   });
-  overlay.addEventListener('click', () => {
-    modal.classList.remove('is-active');
-    body.style.overflow = 'visible';
-    setTabindex(createElementsArr(), 0);
-  });
+  if (overlay) {
+    overlay.addEventListener('click', () => {
+      modal.classList.remove('is-active');
+      body.style.overflow = 'visible';
+      setTabindex(createElementsArr(), 0);
+    });
+  }
 };
 
 export {openModal, closeModal};

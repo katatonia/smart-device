@@ -1297,7 +1297,7 @@ form .form__field input::placeholder {
   color: #ffffff;
 }
 
-form .form__field input[type=name] {
+form .form__field input[type=tel] {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: name;
@@ -1636,7 +1636,7 @@ form button[type=submit].focus-visible:focus {
   color: #ffffff;
 }
 
-.popup .form__field input[type=name] {
+.popup .form__field input[type=tel] {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: name;
@@ -2434,7 +2434,7 @@ form button[type=submit].focus-visible:focus {
     display: none;
   }
 
-  form .form__field input[type=name] {
+  form .form__field input[type=tel] {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
@@ -2460,7 +2460,7 @@ form button[type=submit].focus-visible:focus {
     -ms-grid-column: 1;
   }
 
-  .popup .form__field input[type=name] {
+  .popup .form__field input[type=tel] {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }

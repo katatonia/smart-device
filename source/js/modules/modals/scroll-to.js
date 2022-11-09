@@ -10,7 +10,7 @@ const promoBtn = document.querySelector('.promo__button');
 const feedback = document.querySelector('.feedback');
 
 const scrollToFeedback = () => {
-  if (feedback === null) {
+  if (!feedback) {
     promoBtn.style.display = 'none';
   } else {
     promoBtn.addEventListener('click', () => {

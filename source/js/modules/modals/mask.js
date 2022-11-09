@@ -4,8 +4,10 @@ const createMask = () => {
   const form = document.querySelector('form');
   const inputTel = form.querySelector('input[type="tel"]');
 
-  const mask = new Inputmask('+7(999)999-99-99');
-  mask.mask(inputTel);
+  if (form) {
+    const mask = new Inputmask('+7(999)999-99-99');
+    mask.mask(inputTel);
+  }
 };
 
 export {createMask};
