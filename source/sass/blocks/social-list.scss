@@ -16,16 +16,16 @@
     justify-content: space-between;
     padding-bottom: 0;
   }
+}
 
-  &__item {
-    cursor: pointer;
+.social-list__item {
+  cursor: pointer;
+}
 
-    svg {
-      fill: $color-default-white;
+.social-list__item svg {
+  fill: $color-default-white;
 
-      @include hover-focus {
-        fill: $color-school-bus-yellow;
-      }
-    }
+  @include hover-focus {
+    fill: $color-school-bus-yellow;
   }
 }

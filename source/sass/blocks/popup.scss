@@ -1,75 +1,155 @@
+// .popup {
+//   @include form-template;
+
+//   width: 500px;
+// }
+
+// .popup input {
+//   border: 1px solid transparent;
+
+//   @include hover-focus {
+//     border-color: $color-school-bus-yellow;
+//   }
+// }
+
+// .popup__form {
+//   display: grid;
+//   grid-template-areas:
+//     "name"
+//     "tel"
+//     "text"
+//     "btn"
+//     "agree";
+//   grid-row-gap: 20px;
+// }
+
+// .popup__title {
+//   font: {
+//     family: $roboto-condensed-regular;
+//     size: 30px;
+//     weight: 400;
+//   }
+//   line-height: 42px;
+//   color: $color-default-white;
+//   margin: 0;
+//   padding-bottom: 3px;
+// }
+
+// .popup__subtitle {
+//   font: {
+//     family: $ptmono-regular;
+//     size: 16px;
+//     weight: 400;
+//   }
+//   line-height: 21px;
+//   color: $color-default-white;
+//   margin: 0;
+//   padding-bottom: 40px;
+// }
+
+// .popup__textarea {
+//   margin: 0 0 5px 0;
+
+//   @include hover-focus {
+//     border: 1px solid $color-school-bus-yellow;
+//   }
+// }
+
+// .popup__btn {
+//   @include hover-focus {
+//     color: $color-school-bus-yellow;
+//   }
+// }
+
+// .popup__agree input {
+//   position: absolute;
+//   width: 15px;
+//   height: 15px;
+//   top: 0;
+//   margin-left: -28px;
+//   background: url("../../img/sprite/checkbox.svg") 0 0 no-repeat;
+
+//   &:checked {
+//     background: url("../../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
+//   }
+// }
 .popup {
   @include form-template;
 
   width: 500px;
+}
 
-  input {
-    border: 1px solid transparent;
+.popup input {
+  border: 1px solid transparent;
 
-    @include hover-focus {
-      border-color: $color-school-bus-yellow;
-    }
+  @include hover-focus {
+    border-color: $color-school-bus-yellow;
   }
+}
 
-  &__form {
-    display: grid;
-    grid-template-areas: "name"
-      "tel"
-      "text"
-      "btn"
-      "agree";
-    grid-row-gap: 20px;
+.popup form {
+  display: grid;
+  grid-template-areas:
+    "name"
+    "tel"
+    "text"
+    "btn"
+    "agree";
+  grid-row-gap: 20px;
+  grid-template-columns: 1fr;
+}
+
+.popup form input[type="checkbox"] {
+  top: 0;
+}
+
+.popup__title {
+  font: {
+    family: $roboto-condensed-regular;
+    size: 30px;
+    weight: 400;
   }
+  line-height: 42px;
+  color: $color-default-white;
+  margin: 0;
+  padding-bottom: 3px;
+}
 
-
-  &__title {
-    font: {
-      family: $roboto-condensed-regular;
-      size: 30px;
-      weight: 400;
-    }
-    line-height: 42px;
-    color: $color-default-white;
-    margin: 0;
-    padding-bottom: 3px;
+.popup__subtitle {
+  font: {
+    family: $ptmono-regular;
+    size: 16px;
+    weight: 400;
   }
+  line-height: 21px;
+  color: $color-default-white;
+  margin: 0;
+  padding-bottom: 40px;
+}
 
-  &__subtitle {
-    font: {
-      family: $ptmono-regular;
-      size: 16px;
-      weight: 400;
-    }
-    line-height: 21px;
-    color: $color-default-white;
-    margin: 0;
-    padding-bottom: 40px;
+.popap form textarea {
+  margin: 0 0 5px 0;
+
+  @include hover-focus {
+    border: 1px solid $color-school-bus-yellow;
   }
+}
 
-  &__textarea {
-    margin: 0 0 5px 0;
-
-    @include hover-focus {
-      border: 1px solid $color-school-bus-yellow;
-    }
+.popup form button[type="submit"] {
+  @include hover-focus {
+    color: $color-school-bus-yellow;
   }
+}
 
-  &__btn {
-    @include hover-focus {
-      color: $color-school-bus-yellow;
-    }
-  }
+.popup__agree input {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 0;
+  margin-left: -28px;
+  background: url("../../img/sprite/checkbox.svg") 0 0 no-repeat;
 
-  &__agree input {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 0;
-    margin-left: -28px;
-    background: url("../../img/sprite/checkbox.svg") 0 0 no-repeat;
-  }
-
-  &__agree input:checked {
+  &:checked {
     background: url("../../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
   }
 }

@@ -1,5 +1,9 @@
 .feedback {
-  background: linear-gradient(139deg, $color-cerulean 33.6%, $color-deep-sky-blue 33.6%);
+  background: linear-gradient(
+    139deg,
+    $color-cerulean 33.6%,
+    $color-deep-sky-blue 33.6%
+  );
   padding: 166px 0 248px;
 
   @media (max-width: 1023px) {
@@ -10,77 +14,77 @@
   @media (max-width: 767px) {
     padding: 45px 0 87px;
   }
+}
 
-  &__wrapper {
-    display: flex;
-    justify-content: space-between;
+.feedback__wrapper {
+  display: flex;
+  justify-content: space-between;
 
-    @media (max-width: 1023px) {
-      flex-direction: column;
-    }
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
+}
+
+.feedback__img-wrapper {
+  position: relative;
+  width: 506px;
+  height: 285px;
+
+  @media (max-width: 1023px) {
+    display: none;
+  }
+}
+
+.feedback__img-wrapper img {
+  position: absolute;
+  top: 81px;
+  left: 8px;
+}
+
+.feedback__content-wrapper {
+  @media (min-width: 1024px) {
+    width: 590px;
+  }
+}
+
+.feedback__title {
+  font: {
+    family: $roboto-condensed-regular;
+    size: 36px;
+    weight: 400;
+  }
+  color: $color-default-white;
+  line-height: 50px;
+  margin: 0 0 15px 0;
+
+  @media (max-width: 1023px) {
+    margin: 0 0 8px 0;
   }
 
-  &__img-wrapper {
-    position: relative;
-    width: 506px;
-    height: 285px;
+  @media (max-width: 767px) {
+    font-size: 30px;
+    line-height: 42px;
+  }
+}
 
-    img {
-      position: absolute;
-      top: 81px;
-      left: 8px;
-    }
+.feedback__subtitle {
+  font: {
+    family: $ptmono-regular;
+    size: 16px;
+    weight: 400;
+  }
+  line-height: 21px;
+  color: $color-default-white;
+  padding: 0;
+  margin: 0 0 32px 0;
 
-    @media (max-width: 1023px) {
-      display: none;
-    }
+  @media (max-width: 1023px) {
+    margin: 0 0 25px 0;
   }
 
-  &__content-wrapper {
-    @media (min-width: 1024px) {
-      width: 590px;
-    }
-  }
-
-  &__title {
-    font: {
-      family: $roboto-condensed-regular;
-      size: 36px;
-      weight: 400;
-    }
-    color: $color-default-white;
-    line-height: 50px;
-    margin: 0 0 15px 0;
-
-    @media (max-width: 1023px) {
-      margin: 0 0 8px 0;
-    }
-
-    @media (max-width: 767px) {
-      font-size: 30px;
-      line-height: 42px;
-    }
-  }
-
-  &__subtitle {
-    font: {
-      family: $ptmono-regular;
-      size: 16px;
-      weight: 400;
-    }
-    line-height: 21px;
-    color: $color-default-white;
-    padding: 0;
-    margin: 0 0 32px 0;
-
-    @media (max-width: 1023px) {
-      margin: 0 0 25px 0;
-    }
-
-    @media (max-width: 767px) {
-      font-size: 14px;
-      line-height: 18px;
-      margin-bottom: 34px;
-    }
+  @media (max-width: 767px) {
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 34px;
   }
 }

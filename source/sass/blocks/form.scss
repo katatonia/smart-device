@@ -1,4 +1,101 @@
-.form {
+// .form {
+//   display: grid;
+//   grid-template-areas:
+//     "name tel"
+//     "text text"
+//     "btn agree";
+
+//   grid-column-gap: 30px;
+//   grid-template-columns: 1fr 1fr;
+
+//   @media (max-width: 767px) {
+//     grid-template-areas:
+//       "name"
+//       "tel"
+//       "text"
+//       "btn"
+//       "agree";
+//     grid-template-columns: 1fr;
+//     grid-row-gap: 20px;
+//   }
+
+//   @include form-template;
+
+//   &__input {
+//     border: 1px solid transparent;
+
+//     @include hover-focus {
+//       border-color: $color-school-bus-yellow;
+//     }
+//   }
+
+//   &__textarea {
+//     margin: 19px 0 34px;
+//     border: 1px solid transparent;
+
+//     @include hover-focus {
+//       border-color: $color-school-bus-yellow;
+//     }
+
+//     @media (max-width: 1023px) {
+//       margin: 20px 0 35px;
+//       padding: 30px 0 82px 15px;
+//     }
+
+//     @media (max-width: 767px) {
+//       margin: 20px 0 30px;
+//       padding: 24px 0 114px 15px;
+//     }
+//   }
+
+//   &__btn {
+//     margin-right: 47px;
+
+//     @include hover-focus {
+//       color: $color-school-bus-yellow;
+//     }
+
+//     @media (max-width: 1023px) {
+//       width: 265px;
+//       padding: 14px 25px;
+//     }
+
+//     @media (max-width: 767px) {
+//       width: 100%;
+//       margin: 0 0 25px 0;
+//     }
+//   }
+
+//   &__agree {
+//     margin-top: 16px;
+//   }
+
+//   /* Checkbox */
+
+//   .form__agree input {
+//     position: absolute;
+//     width: 15px;
+//     height: 15px;
+//     top: 8px;
+//     margin-left: -28px;
+//     background: url("../../img/sprite/checkbox.svg") 0 0 no-repeat;
+
+//     @media (max-width: 1023px) {
+//       top: 17px;
+//       margin-left: -26px;
+//     }
+
+//     @media (max-width: 767px) {
+//       top: 5px;
+//       margin-left: -27px;
+//     }
+//   }
+
+//   .form__agree input:checked {
+//     background: url("../../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
+//   }
+// }
+form {
   display: grid;
   grid-template-areas:
     "name tel"
@@ -20,78 +117,78 @@
   }
 
   @include form-template;
+}
 
-  &__input {
-    border: 1px solid transparent;
+.form__field input {
+  border: 1px solid transparent;
 
-    @include hover-focus {
-      border-color: $color-school-bus-yellow;
-    }
+  @include hover-focus {
+    border-color: $color-school-bus-yellow;
+  }
+}
+
+form textarea {
+  margin: 19px 0 34px;
+  border: 1px solid transparent;
+
+  @include hover-focus {
+    border-color: $color-school-bus-yellow;
   }
 
-  &__textarea {
-    margin: 19px 0 34px;
-    border: 1px solid transparent;
-
-    @include hover-focus {
-      border-color: $color-school-bus-yellow;
-    }
-
-    @media (max-width: 1023px) {
-      margin: 20px 0 35px;
-      padding: 30px 0 82px 15px;
-    }
-
-    @media (max-width: 767px) {
-      margin: 20px 0 30px;
-      padding: 24px 0 114px 15px;
-    }
+  @media (max-width: 1023px) {
+    margin: 20px 0 35px;
+    padding: 30px 0 82px 15px;
   }
 
-  &__btn {
-    margin-right: 47px;
+  @media (max-width: 767px) {
+    margin: 20px 0 30px;
+    padding: 24px 0 114px 15px;
+  }
+}
 
-    @include hover-focus {
-      color: $color-school-bus-yellow;
-    }
+form button[type="submit"] {
+  margin-right: 47px;
 
-    @media (max-width: 1023px) {
-      width: 265px;
-      padding: 14px 25px;
-    }
-
-    @media (max-width: 767px) {
-      width: 100%;
-      margin: 0 0 25px 0;
-    }
+  @include hover-focus {
+    color: $color-school-bus-yellow;
   }
 
-  &__agree {
-    margin-top: 16px;
+  @media (max-width: 1023px) {
+    width: 265px;
+    padding: 14px 25px;
   }
 
-  /* Checkbox */
+  @media (max-width: 767px) {
+    width: 100%;
+    margin: 0 0 25px 0;
+  }
+}
 
-  .form__agree input {
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: 8px;
-    margin-left: -28px;
-    background: url("../../img/sprite/checkbox.svg") 0 0 no-repeat;
+.form__agree label {
+  margin-top: 16px;
+}
 
-    @media (max-width: 1023px) {
-      top: 17px;
-      margin-left: -26px;
-    }
+/* Checkbox */
 
-    @media (max-width: 767px) {
-      top: 5px;
-      margin-left: -27px;
-    }
+.form__agree input {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 8px;
+  margin-left: -28px;
+  background: url("../../img/sprite/checkbox.svg") 0 0 no-repeat;
+
+  @media (max-width: 1023px) {
+    top: 17px;
+    margin-left: -26px;
   }
 
-  .form__agree input:checked {
-    background: url("../../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
+  @media (max-width: 767px) {
+    top: 5px;
+    margin-left: -27px;
   }
+}
+
+.form__agree input:checked {
+  background: url("../../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
 }

@@ -86,7 +86,7 @@
 }
 
 @mixin form-template {
-  &__input {
+  .form__field input {
     @include form-text;
     width: 100%;
     border: none;
@@ -94,20 +94,20 @@
     background-color: $color-pacific-blue;
     padding: 15px 0 15px 15px;
 
-    &--name {
-      grid-area: name;
-    }
-
-    &--tel {
-      grid-area: tel;
-    }
-
     &::placeholder {
       @include form-text;
     }
   }
 
-  &__textarea {
+  .form__field input[type="tel"] {
+    grid-area: name;
+  }
+
+  .form__field input[type="name"] {
+    grid-area: tel;
+  }
+
+  textarea {
     font: {
       size: 16px;
       weight: 400;
@@ -125,7 +125,7 @@
     }
   }
 
-  &__btn {
+  button[type="submit"] {
     width: 100%;
     font: {
       family: $roboto-condensed-bold;
@@ -143,18 +143,13 @@
     text-transform: uppercase;
   }
 
-  &__agree {
+  .form__agree {
     @include form-text;
     grid-area: agree;
     position: relative;
     font-size: 14px;
     line-height: 16px;
     padding-left: 37px;
-
-    input {
-      position: absolute;
-      appearance: none;
-    }
 
     @media (max-width: 1023px) {
       padding-top: 10px;
@@ -164,6 +159,11 @@
     @media (max-width: 767px) {
       padding: 0 0 0 32px;
     }
+  }
+
+  .form__agree input {
+    position: absolute;
+    appearance: none;
   }
 }
 
