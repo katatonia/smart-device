@@ -1297,13 +1297,13 @@ form .form__field input::placeholder {
   color: #ffffff;
 }
 
-form .form__field input[type=tel] {
+form .form__field input[type=name] {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: name;
 }
 
-form .form__field input[type=name] {
+form .form__field input[type=tel] {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tel;
@@ -1441,11 +1441,11 @@ form button[type=submit].focus-visible:focus {
   height: 15px;
   top: 8px;
   margin-left: -28px;
-  background: url("../../img/sprite/checkbox.svg") 0 0 no-repeat;
+  background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
 }
 
 .form__agree input:checked {
-  background: url("../../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
+  background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
 }
 
 .footer {
@@ -1636,13 +1636,13 @@ form button[type=submit].focus-visible:focus {
   color: #ffffff;
 }
 
-.popup .form__field input[type=tel] {
+.popup .form__field input[type=name] {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: name;
 }
 
-.popup .form__field input[type=name] {
+.popup .form__field input[type=tel] {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: tel;
@@ -2434,12 +2434,12 @@ form button[type=submit].focus-visible:focus {
     display: none;
   }
 
-  form .form__field input[type=tel] {
+  form .form__field input[type=name] {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
 
-  form .form__field input[type=name] {
+  form .form__field input[type=tel] {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
   }
@@ -2460,12 +2460,12 @@ form button[type=submit].focus-visible:focus {
     -ms-grid-column: 1;
   }
 
-  .popup .form__field input[type=tel] {
+  .popup .form__field input[type=name] {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
   }
 
-  .popup .form__field input[type=name] {
+  .popup .form__field input[type=tel] {
     -ms-grid-row: 3;
     -ms-grid-column: 1;
   }

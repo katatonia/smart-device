@@ -99,11 +99,11 @@
     }
   }
 
-  .form__field input[type="tel"] {
+  .form__field input[type="name"] {
     grid-area: name;
   }
 
-  .form__field input[type="name"] {
+  .form__field input[type="tel"] {
     grid-area: tel;
   }
 

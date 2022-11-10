@@ -176,7 +176,7 @@ form button[type="submit"] {
   height: 15px;
   top: 8px;
   margin-left: -28px;
-  background: url("../../img/sprite/checkbox.svg") 0 0 no-repeat;
+  background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
 
   @media (max-width: 1023px) {
     top: 17px;
@@ -190,5 +190,5 @@ form button[type="submit"] {
 }
 
 .form__agree input:checked {
-  background: url("../../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
+  background: url("../img/sprite/checkbox-checked.svg") 0 0 no-repeat;
 }
