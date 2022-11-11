@@ -1,6 +1,18 @@
 const openAccordion = function () {
+  const wrapper = document.querySelectorAll('.accordion__wrapper');
+  const elementsArr = [];
+  wrapper.forEach((node) => {
+    elementsArr.push(node);
+  });
+
   let titles = document.querySelectorAll('.accordion__title');
   if (titles) {
+    elementsArr.forEach((e) => {
+      e.classList.remove('no-js');
+    });
+    titles.forEach((e) => {
+      e.classList.remove('accordion__title--none');
+    });
     for (let i = 0; i < titles.length; i++) {
       titles[i].onclick = function () {
         this.classList.toggle('active');
@@ -20,5 +32,4 @@ const openAccordion = function () {
     }
   }
 };
-
 export {openAccordion};

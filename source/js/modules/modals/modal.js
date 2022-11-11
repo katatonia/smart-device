@@ -8,6 +8,7 @@ const modal = document.querySelector('.modal');
 const closeBtn = modal.querySelector('.modal__close-btn');
 const overlay = modal.querySelector('.modal__overlay');
 const popup = document.querySelector('.popup');
+const inputName = popup.querySelector('input[type="text"]');
 
 const setTabindex = (arr, num) => {
   arr.forEach((e) => {
@@ -42,7 +43,7 @@ const openModal = () => {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       const focusableContent = modal.querySelectorAll(focusableElements);
       setTabindex(focusableContent, 0);
-      popup.setAttribute('tabindex', '0');
+      inputName.focus({focusVisible: true});
     }
   });
 };

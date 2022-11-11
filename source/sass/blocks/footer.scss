@@ -3,6 +3,10 @@
   padding: 34px 0 55px;
   min-height: 280px;
 
+  @media (max-width: 1023px) {
+    padding-top: 30px;
+  }
+
   @media (max-width: 767px) {
     padding-top: 18px;
   }
@@ -20,7 +24,7 @@
   }
 
   @media (max-width: 1023px) {
-    padding: 0 50px;
+    padding: 0 45px 0 50px;
     grid-template-columns: 1fr;
   }
 
@@ -52,7 +56,7 @@
   display: flex;
   justify-content: center;
   cursor: pointer;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
 
   @media (max-width: 1023px) {
     padding-bottom: 0;

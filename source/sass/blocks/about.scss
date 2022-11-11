@@ -1,6 +1,6 @@
 .about {
   @media (max-width: 767px) {
-    margin: 121px 0 80px;
+    margin: 48px 0 80px;
   }
 }
 
@@ -20,6 +20,7 @@
 
   @media (max-width: 767px) {
     display: block;
+    margin-top: 0;
   }
 }
 
@@ -51,10 +52,6 @@
   grid-area: text;
 
   @media (max-width: 1023px) {
-    padding-right: 11px;
-  }
-
-  @media (max-width: 767px) {
     padding-right: 0;
   }
 }
@@ -96,14 +93,12 @@
 }
 
 .about__text--tablet {
-  &--tablet {
-    @media (max-width: 1023px) {
-      display: block;
-    }
+  @media (max-width: 1023px) {
+    display: block;
+  }
 
-    @media (max-width: 767px) {
-      display: none;
-    }
+  @media (max-width: 767px) {
+    display: none;
   }
 }
 

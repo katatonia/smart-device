@@ -4,24 +4,23 @@
   grid-column-gap: 20px;
 
   @media (max-width: 1023px) {
-    grid-column-gap: 15px;
+    grid-column-gap: 30px;
   }
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
-    grid-column-gap: 30px;
   }
 }
 
 .accordion__wrapper {
-  &--nojs {
-    max-height: 100%;
-  }
-
   @media (max-width: 767px) {
     overflow: hidden;
     max-height: 0;
     transition: 0.3s max-height ease-out;
+
+     &.no-js {
+      max-height: 100%;
+    }
   }
 }
 
@@ -99,6 +98,13 @@
 
     &.active::after {
       opacity: 0;
+    }
+
+    &--none {
+      &::before,
+      &::after {
+        display: none;
+      }
     }
   }
 }

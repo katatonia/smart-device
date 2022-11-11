@@ -2,9 +2,9 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {showMore} from './modules/modals/show-more';
 import {scrollToFeedback} from './modules/modals/scroll-to';
-import {createMask} from './modules/modals/mask';
 import {openAccordion} from './modules/modals/accordion';
 import {openModal, closeModal} from './modules/modals/modal';
+import {createMask} from './modules/modals/mask';
 
 // ---------------------------------
 
@@ -18,10 +18,10 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   showMore();
   scrollToFeedback();
-  createMask();
   openAccordion();
   openModal();
   closeModal();
+  createMask();
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
