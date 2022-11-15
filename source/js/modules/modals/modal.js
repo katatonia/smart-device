@@ -7,11 +7,8 @@ const menuBtn = document.querySelector('.menu__button');
 const modal = document.querySelector('.modal');
 const closeBtn = modal.querySelector('.modal__close-btn');
 const overlay = modal.querySelector('.modal__overlay');
-const form = modal.querySelector('form');
-const inputName = form.querySelector('input[type="text"]');
-const inputTel = form.querySelector('input[type="tel"]');
-const textarea = form.querySelector('textarea');
-const submitBtn = form.querySelector('button[type="submit"]');
+const form = document.querySelector('form');
+const modalForm = document.querySelector('form.popup__form');
 
 const setTabindex = (arr, num) => {
   arr.forEach((e) => {
@@ -36,18 +33,37 @@ const createElementsArr = () => {
   return elementsArr;
 };
 
-const cancelSubmit = () => {
-  submitBtn.addEventListener('click', () => {
-    localStorage.setItem('Имя', inputName);
-    localStorage.setItem('Телефон', inputTel);
-    localStorage.setItem('Вопрос', textarea);
-    form.addEventListener('submit', (e) => {
-      if (inputTel.value.length < 10) {
-        e.preventDefault();
-      }
-    });
+const getFormInputs = (_form) => {
+  const inputName = _form.querySelector('input[name="Имя"]');
+  const inputPhone = _form.querySelector('input[name="Телефон"]');
+  const inputQuestion = _form.querySelector('textarea[name="Вопрос"]');
+
+  return {
+    inputName,
+    inputPhone,
+    inputQuestion,
+  };
+};
+
+const onFormSubmit = (formToSubmit) => {
+  formToSubmit.addEventListener('submit', (e) => {
+    const {inputName, inputPhone, inputQuestion} = getFormInputs(formToSubmit);
+    const isPhone = /^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(inputPhone.value);
+
+    if (!isPhone) {
+      e.preventDefault();
+      inputPhone.setCustomValidity('Заполните номер');
+    } else {
+      inputPhone.setCustomValidity('');
+      localStorage.setItem('Имя', inputName.value);
+      localStorage.setItem('Телефон', inputPhone.value);
+      localStorage.setItem('Вопрос', inputQuestion.value);
+    }
   });
 };
+
+const submitForm = () => onFormSubmit(form);
+const submitModal = () => onFormSubmit(modalForm);
 
 const openModal = () => {
   menuBtn.addEventListener('click', (e) => {
@@ -59,7 +75,9 @@ const openModal = () => {
       const focusableElements = 'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])';
       const focusableContent = modal.querySelectorAll(focusableElements);
       setTabindex(focusableContent, 0);
-      inputName.focus({focusVisible: true});
+      setTimeout(() => {
+        modal.querySelector('input[name="Имя"]').focus({focusVisible: true});
+      }, 500);
     }
   });
 };
@@ -88,4 +106,4 @@ const closeModal = () => {
   }
 };
 
-export {openModal, closeModal, cancelSubmit};
+export {openModal, closeModal, submitForm, submitModal};
