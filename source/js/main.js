@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {showMore} from './modules/modals/show-more';
 import {scrollToFeedback} from './modules/modals/scroll-to';
 import {openAccordion} from './modules/modals/accordion';
-import {openModal, closeModal, submitForm, submitModal} from './modules/modals/modal';
+import {openModal, closeModal, submitForm, submitModal, setupPhoneInputs} from './modules/modals/modal';
 import {createMask} from './modules/modals/mask';
 
 // ---------------------------------
@@ -21,6 +21,7 @@ window.addEventListener('DOMContentLoaded', () => {
   openAccordion();
   openModal();
   closeModal();
+  setupPhoneInputs();
   submitForm();
   submitModal();
   createMask();

@@ -45,21 +45,41 @@ const getFormInputs = (_form) => {
   };
 };
 
+const isPhone = (value) => {
+  return /^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(value);
+};
+
 const onFormSubmit = (formToSubmit) => {
   formToSubmit.addEventListener('submit', (e) => {
     const {inputName, inputPhone, inputQuestion} = getFormInputs(formToSubmit);
-    const isPhone = /^(\+7|7|8)?[\s\-]?\(?[0-9]{3}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/.test(inputPhone.value);
 
-    if (!isPhone) {
+    if (!isPhone(inputPhone.value)) {
       e.preventDefault();
-      inputPhone.setCustomValidity('Заполните номер');
     } else {
-      inputPhone.setCustomValidity('');
       localStorage.setItem('Имя', inputName.value);
       localStorage.setItem('Телефон', inputPhone.value);
       localStorage.setItem('Вопрос', inputQuestion.value);
     }
   });
+};
+
+const setOnPhoneInputChange = (input) => {
+  input.addEventListener('change', (e) => {
+    const {value} = e.target;
+    if (!value || !isPhone(value)) {
+      input.setCustomValidity('Введите номер');
+    } else {
+      input.setCustomValidity('');
+    }
+  });
+};
+
+const setupPhoneInputs = () => {
+  const {inputPhone: formPhoneInput} = getFormInputs(form);
+  setOnPhoneInputChange(formPhoneInput);
+
+  const {inputPhone: modalPhoneInput} = getFormInputs(modalForm);
+  setOnPhoneInputChange(modalPhoneInput);
 };
 
 const submitForm = () => onFormSubmit(form);
@@ -106,4 +126,4 @@ const closeModal = () => {
   }
 };
 
-export {openModal, closeModal, submitForm, submitModal};
+export {openModal, closeModal, submitForm, submitModal, setupPhoneInputs};
