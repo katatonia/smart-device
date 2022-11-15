@@ -30,6 +30,10 @@
   width: 506px;
   height: 285px;
 
+  @media (max-width: 1220px) {
+    flex-basis: 45%;
+  }
+
   @media (max-width: 1023px) {
     display: none;
   }
@@ -42,6 +46,10 @@
 }
 
 .feedback__content-wrapper {
+  @media (max-width: 1219px) {
+    flex-basis: 50%;
+  }
+
   @media (min-width: 1024px) {
     width: 580px;
     margin-right: 10px;

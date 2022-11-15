@@ -1,4 +1,4 @@
-.list {
+.social-list {
   margin: 10px 45px 0 0;
   padding: 0;
   list-style: none;
@@ -20,11 +20,11 @@
   }
 }
 
-.list__item {
+.social-list__item {
   cursor: pointer;
 }
 
-.list__item svg {
+.social-list__item svg {
   fill: $color-default-white;
 
   @include hover-focus {

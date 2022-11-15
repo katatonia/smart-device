@@ -7,8 +7,11 @@ const menuBtn = document.querySelector('.menu__button');
 const modal = document.querySelector('.modal');
 const closeBtn = modal.querySelector('.modal__close-btn');
 const overlay = modal.querySelector('.modal__overlay');
-const popup = document.querySelector('.popup');
-const inputName = popup.querySelector('input[type="text"]');
+const form = modal.querySelector('form');
+const inputName = form.querySelector('input[type="text"]');
+const inputTel = form.querySelector('input[type="tel"]');
+const textarea = form.querySelector('textarea');
+const submitBtn = form.querySelector('button[type="submit"]');
 
 const setTabindex = (arr, num) => {
   arr.forEach((e) => {
@@ -31,6 +34,19 @@ const createElementsArr = () => {
     elementsArr.push(node);
   });
   return elementsArr;
+};
+
+const cancelSubmit = () => {
+  submitBtn.addEventListener('click', () => {
+    localStorage.setItem('Имя', inputName);
+    localStorage.setItem('Телефон', inputTel);
+    localStorage.setItem('Вопрос', textarea);
+    form.addEventListener('submit', (e) => {
+      if (inputTel.value.length < 10) {
+        e.preventDefault();
+      }
+    });
+  });
 };
 
 const openModal = () => {
@@ -72,4 +88,4 @@ const closeModal = () => {
   }
 };
 
-export {openModal, closeModal};
+export {openModal, closeModal, cancelSubmit};

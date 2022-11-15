@@ -1484,7 +1484,7 @@ form button[type=submit].focus-visible:focus {
   padding-bottom: 20px;
 }
 
-.list {
+.social-list {
   margin: 10px 45px 0 0;
   padding: 0;
   list-style: none;
@@ -1498,15 +1498,15 @@ form button[type=submit].focus-visible:focus {
   justify-content: space-around;
 }
 
-.list__item {
+.social-list__item {
   cursor: pointer;
 }
 
-.list__item svg {
+.social-list__item svg {
   fill: #ffffff;
 }
 
-.list__item svg.focus-visible:focus {
+.social-list__item svg.focus-visible:focus {
   fill: #ffd801;
 }
 
@@ -1824,6 +1824,20 @@ form button[type=submit].focus-visible:focus {
   }
 }
 
+@media (max-width: 1220px) {
+  .feedback__img-wrapper {
+    -ms-flex-preferred-size: 45%;
+    flex-basis: 45%;
+  }
+}
+
+@media (max-width: 1219px) {
+  .feedback__content-wrapper {
+    -ms-flex-preferred-size: 50%;
+    flex-basis: 50%;
+  }
+}
+
 @media (max-width: 1023px) {
   .container {
     padding: 0 50px;
@@ -2000,7 +2014,7 @@ form button[type=submit].focus-visible:focus {
     padding-bottom: 0;
   }
 
-  .list {
+  .social-list {
     min-width: 150px;
     -ms-flex-pack: distribute;
     justify-content: space-around;
@@ -2275,7 +2289,7 @@ form button[type=submit].focus-visible:focus {
     padding-bottom: 15px;
   }
 
-  .list {
+  .social-list {
     min-width: 150px;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
@@ -2437,7 +2451,7 @@ form button[type=submit].focus-visible:focus {
     color: #ffd801;
   }
 
-  .list__item svg:hover:not(.focus-visible) {
+  .social-list__item svg:hover:not(.focus-visible) {
     fill: #ffd801;
   }
 
