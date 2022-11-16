@@ -6,7 +6,7 @@
 .popup input {
   @include form-text;
   width: 100%;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 3px;
   background-color: $color-pacific-blue;
   padding: 12px 0 15px 15px;
@@ -14,7 +14,6 @@
   &::placeholder {
     @include form-text;
   }
-  border: 1px solid transparent;
 
   @include hover-focus {
     border-color: $color-school-bus-yellow;

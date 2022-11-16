@@ -18,7 +18,7 @@
     max-height: 0;
     transition: 0.3s max-height ease-out;
 
-     &.no-js {
+    &.no-js {
       max-height: 100%;
     }
   }
