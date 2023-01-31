@@ -148,6 +148,6 @@
 
 .accordion__list-item a {
   @include hover-focus {
-    color: $color-school-bus-yellow;
+    opacity: .9;
   }
 }

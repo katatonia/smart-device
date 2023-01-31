@@ -26,7 +26,7 @@ form {
   border: 1px solid transparent;
 
   @include hover-focus {
-    border-color: $color-school-bus-yellow;
+    border: 1px solid $color-default-white;
   }
 }
 
@@ -35,7 +35,7 @@ form textarea {
   border: 1px solid transparent;
 
   @include hover-focus {
-    border-color: $color-school-bus-yellow;
+    border: 1px solid $color-default-white;
   }
 
   @media (max-width: 1023px) {
@@ -54,7 +54,7 @@ form button[type="submit"] {
   width: 265px;
 
   @include hover-focus {
-    color: $color-school-bus-yellow;
+    opacity: .9;
   }
 
   @media (max-width: 1023px) {

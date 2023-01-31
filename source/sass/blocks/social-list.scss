@@ -23,6 +23,6 @@
   fill: $color-default-white;
 
   @include hover-focus {
-    fill: $color-school-bus-yellow;
+    opacity: .9;
   }
 }

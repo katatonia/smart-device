@@ -827,7 +827,7 @@ button,
 }
 
 .menu__text.focus-visible:focus {
-  color: #ffd801;
+  opacity: 0.9;
 }
 
 .menu__button {
@@ -845,7 +845,7 @@ button,
 }
 
 .menu__button.focus-visible:focus {
-  color: #ffd801;
+  opacity: 0.9;
 }
 
 .menu__email-icon,
@@ -933,8 +933,7 @@ button,
 }
 
 .promo__button.focus-visible:focus {
-  color: #ffd801;
-  background-color: #041827;
+  opacity: 0.9;
 }
 
 .promo__button--mobile {
@@ -965,6 +964,9 @@ button,
   border: 1px solid #e5e5e5;
   border-left: 5px solid #00b2ff;
   cursor: default;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .features__item-icon {
@@ -1101,8 +1103,7 @@ form > .about__button {
 }
 
 .about__button.focus-visible:focus {
-  color: #ffffff;
-  background-color: #00b2ff;
+  opacity: 0.9;
 }
 
 .products {
@@ -1256,7 +1257,6 @@ form .form__field input {
   line-height: 21px;
   color: #ffffff;
   width: 100%;
-  border: none;
   border-radius: 3px;
   background-color: #019bdf;
   padding: 15px 0 15px 15px;
@@ -1325,7 +1325,6 @@ form textarea {
   background-color: #019bdf;
   grid-area: text;
   padding: 25px 0 88px 15px;
-  border: 0;
   border-radius: 3px;
 }
 
@@ -1414,7 +1413,7 @@ form .form__agree input {
 }
 
 .form__field input.focus-visible:focus {
-  border-color: #ffd801;
+  border: 1px solid #ffffff;
 }
 
 form textarea {
@@ -1423,7 +1422,7 @@ form textarea {
 }
 
 form textarea.focus-visible:focus {
-  border-color: #ffd801;
+  border: 1px solid #ffffff;
 }
 
 form button[type=submit] {
@@ -1432,7 +1431,7 @@ form button[type=submit] {
 }
 
 form button[type=submit].focus-visible:focus {
-  color: #ffd801;
+  opacity: 0.9;
 }
 
 .form__agree label {
@@ -1515,7 +1514,7 @@ form button[type=submit].focus-visible:focus {
 }
 
 .social-list__item svg.focus-visible:focus {
-  fill: #ffd801;
+  opacity: 0.9;
 }
 
 .accordion {
@@ -1580,7 +1579,7 @@ form button[type=submit].focus-visible:focus {
 }
 
 .accordion__list-item a.focus-visible:focus {
-  color: #ffd801;
+  opacity: 0.9;
 }
 
 .popup {
@@ -2415,11 +2414,11 @@ form button[type=submit].focus-visible:focus {
   }
 
   .menu__text:hover:not(.focus-visible) {
-    color: #ffd801;
+    opacity: 0.9;
   }
 
   .menu__button:hover:not(.focus-visible) {
-    color: #ffd801;
+    opacity: 0.9;
   }
 
   .menu__email-icon:hover:not(.focus-visible),
@@ -2428,33 +2427,31 @@ form button[type=submit].focus-visible:focus {
   }
 
   .promo__button:hover:not(.focus-visible) {
-    color: #ffd801;
-    background-color: #041827;
+    opacity: 0.9;
   }
 
   .about__button:hover:not(.focus-visible) {
-    color: #ffffff;
-    background-color: #00b2ff;
+    opacity: 0.9;
   }
 
   .form__field input:hover:not(.focus-visible) {
-    border-color: #ffd801;
+    border: 1px solid #ffffff;
   }
 
   form textarea:hover:not(.focus-visible) {
-    border-color: #ffd801;
+    border: 1px solid #ffffff;
   }
 
   form button[type=submit]:hover:not(.focus-visible) {
-    color: #ffd801;
+    opacity: 0.9;
   }
 
   .social-list__item svg:hover:not(.focus-visible) {
-    fill: #ffd801;
+    opacity: 0.9;
   }
 
   .accordion__list-item a:hover:not(.focus-visible) {
-    color: #ffd801;
+    opacity: 0.9;
   }
 
   .popup input:hover:not(.focus-visible) {

@@ -107,8 +107,7 @@
   }
 
   @include hover-focus {
-    color: $color-school-bus-yellow;
-    background-color: $color-black-pearl;
+    opacity: .9;
   }
 
   &--mobile {

@@ -125,8 +125,7 @@
   }
 
   @include hover-focus {
-    color: $color-default-white;
-    background-color: $color-deep-sky-blue;
+    opacity: .9;
   }
 
   @media (max-width: 767px) {
