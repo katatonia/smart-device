@@ -21,8 +21,9 @@
 
 .social-list__item svg {
   fill: $color-default-white;
+  transition: .3s;
 
   @include hover-focus {
-    opacity: .9;
+    fill: $color-deep-sky-blue;
   }
 }

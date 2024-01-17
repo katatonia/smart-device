@@ -3,7 +3,8 @@
   background-color: $color-black-pearl;
   padding-bottom: 280px;
 
-  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  @media (min-resolution: $retina-dpi),
+  (min-resolution: $retina-dppx) {
     background-image: url("../img/promo/promo-bg@2x.jpg");
   }
 
@@ -42,6 +43,7 @@
     size: 80px;
     weight: 700;
   }
+
   line-height: 94px;
   color: $color-alice-blue;
   letter-spacing: 0.07em;
@@ -68,6 +70,7 @@
     size: 22px;
     weight: 400;
   }
+
   line-height: 34px;
   color: $color-alice-blue;
   margin: 0;
@@ -90,10 +93,12 @@
 
 .promo__button {
   width: 410px;
+
   font: {
     size: 18px;
     weight: 700;
   }
+
   line-height: 21px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -101,13 +106,14 @@
   background-color: $color-deep-sky-blue;
   border: none;
   cursor: pointer;
+  transition: .3s;
 
   &--nojs {
     @include is-hidden;
   }
 
   @include hover-focus {
-    opacity: .9;
+    opacity: .5;
   }
 
   &--mobile {

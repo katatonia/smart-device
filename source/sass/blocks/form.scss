@@ -24,6 +24,7 @@ form {
 
 .form__field input {
   border: 1px solid transparent;
+  transition: .3s;
 
   @include hover-focus {
     border: 1px solid $color-default-white;
@@ -33,6 +34,7 @@ form {
 form textarea {
   margin: 19px 0 34px;
   border: 1px solid transparent;
+  transition: .3s;
 
   @include hover-focus {
     border: 1px solid $color-default-white;
@@ -52,9 +54,10 @@ form textarea {
 form button[type="submit"] {
   padding: 10px;
   width: 265px;
+  transition: .3s;
 
   @include hover-focus {
-    opacity: .9;
+    opacity: .5;
   }
 
   @media (max-width: 1023px) {
@@ -80,6 +83,10 @@ form button[type="submit"] {
   top: 23px;
   margin-left: -28px;
   background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
+
+  @include hover-focus {
+    cursor: pointer;
+  }
 
   @media (max-width: 1023px) {
     top: 17px;

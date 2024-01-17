@@ -32,4 +32,5 @@ const openAccordion = function () {
     }
   }
 };
-export {openAccordion};
+
+export { openAccordion };

@@ -10,13 +10,14 @@
   border-radius: 3px;
   background-color: $color-pacific-blue;
   padding: 12px 0 15px 15px;
+  transition: .3s;
 
   &::placeholder {
     @include form-text;
   }
 
   @include hover-focus {
-    border-color: $color-school-bus-yellow;
+    border-color: $color-default-white;
   }
 }
 
@@ -38,6 +39,7 @@
     size: 30px;
     weight: 400;
   }
+
   line-height: 42px;
   color: $color-default-white;
   margin: 0;
@@ -50,6 +52,7 @@
     size: 16px;
     weight: 400;
   }
+
   line-height: 21px;
   color: $color-default-white;
   margin: 0;
@@ -59,9 +62,10 @@
 .popup form textarea {
   padding: 22px 0 88px 15px;
   margin: 0;
+  transition: .3s;
 
   @include hover-focus {
-    border: 1px solid $color-school-bus-yellow;
+    border: 1px solid $color-default-white;
   }
 }
 
@@ -71,7 +75,7 @@
   margin-top: 5px;
 
   @include hover-focus {
-    color: $color-school-bus-yellow;
+    opacity: .5;
   }
 }
 
@@ -90,12 +94,14 @@
 .popup__form-agree input {
   appearance: none;
   padding: 0;
+  border: none;
   position: absolute;
   width: 15px;
   height: 15px;
   top: 5px;
   margin-left: -28px;
   background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
+  cursor: pointer;
 }
 
 .popup__form-agree input:checked {

@@ -735,6 +735,9 @@ button,
   width: 40px;
   height: 40px;
   padding: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
   background: rgba(255, 255, 255, 0);
   border: none;
   cursor: pointer;
@@ -742,7 +745,7 @@ button,
 }
 
 .modal__close-btn.focus-visible:focus {
-  fill: #ffd801;
+  opacity: 0.5;
 }
 
 .modal--responsive .modal__content {
@@ -817,6 +820,15 @@ button,
   margin-top: 15px;
 }
 
+.menu__contacts a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
 .menu__text {
   font-family: "PTMono Regular", "Arial", sans-serif;
   font-size: 16px;
@@ -824,10 +836,14 @@ button,
   line-height: 18px;
   color: #f2f5f6;
   padding-left: 15px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .menu__text.focus-visible:focus {
-  opacity: 0.9;
+  color: #00b2ff;
 }
 
 .menu__button {
@@ -838,14 +854,18 @@ button,
   border: 1px solid #f2f5f6;
   padding: 10px 15px;
   background-color: transparent;
-  cursor: pointer;
   letter-spacing: 0.05em;
   word-break: break-word;
   margin-top: 7px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .menu__button.focus-visible:focus {
-  opacity: 0.9;
+  border-color: #00b2ff;
+  color: #00b2ff;
 }
 
 .menu__email-icon,
@@ -853,11 +873,9 @@ button,
   width: 20px;
   height: 20px;
   fill: #00b2ff;
-}
-
-.menu__email-icon.focus-visible:focus,
-.menu__phone-icon.focus-visible:focus {
-  fill: #ffd801;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .menu__logo {
@@ -926,6 +944,9 @@ button,
   background-color: #00b2ff;
   border: none;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .promo__button--nojs {
@@ -933,7 +954,7 @@ button,
 }
 
 .promo__button.focus-visible:focus {
-  opacity: 0.9;
+  opacity: 0.5;
 }
 
 .promo__button--mobile {
@@ -1086,6 +1107,9 @@ form > .about__text-wrapper {
   padding: 10px 15px;
   grid-area: btn;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 form > .about__button {
@@ -1103,7 +1127,7 @@ form > .about__button {
 }
 
 .about__button.focus-visible:focus {
-  opacity: 0.9;
+  opacity: 0.5;
 }
 
 .products {
@@ -1177,6 +1201,13 @@ form > .about__button {
   background-color: #00b2ff;
   border-radius: 3px;
   cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.products__btn.focus-visible:focus {
+  opacity: 0.5;
 }
 
 .products__arrow-wrapper {
@@ -1410,6 +1441,9 @@ form .form__agree input {
 
 .form__field input {
   border: 1px solid transparent;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .form__field input.focus-visible:focus {
@@ -1419,6 +1453,9 @@ form .form__agree input {
 form textarea {
   margin: 19px 0 34px;
   border: 1px solid transparent;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 form textarea.focus-visible:focus {
@@ -1428,10 +1465,13 @@ form textarea.focus-visible:focus {
 form button[type=submit] {
   padding: 10px;
   width: 265px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 form button[type=submit].focus-visible:focus {
-  opacity: 0.9;
+  opacity: 0.5;
 }
 
 .form__agree label {
@@ -1447,6 +1487,10 @@ form button[type=submit].focus-visible:focus {
   top: 23px;
   margin-left: -28px;
   background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
+}
+
+.form__agree input.focus-visible:focus {
+  cursor: pointer;
 }
 
 .form__agree input:checked {
@@ -1511,10 +1555,13 @@ form button[type=submit].focus-visible:focus {
 
 .social-list__item svg {
   fill: #ffffff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .social-list__item svg.focus-visible:focus {
-  opacity: 0.9;
+  fill: #00b2ff;
 }
 
 .accordion {
@@ -1523,6 +1570,12 @@ form button[type=submit].focus-visible:focus {
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 20px;
+}
+
+.accordion__wrapper {
+  -webkit-transition: 0.3s max-height ease-out;
+  -o-transition: 0.3s max-height ease-out;
+  transition: 0.3s max-height ease-out;
 }
 
 .accordion__item {
@@ -1552,9 +1605,6 @@ form button[type=submit].focus-visible:focus {
   color: #ffffff;
   padding: 10px 0 7px;
   position: relative;
-  -webkit-transition: 0.3s;
-  -o-transition: 0.3s;
-  transition: 0.3s;
   cursor: default;
 }
 
@@ -1569,17 +1619,20 @@ form button[type=submit].focus-visible:focus {
   padding: 0;
 }
 
-.accordion__list a {
-  color: #ffffff;
-}
-
 .accordion__list-item {
   cursor: pointer;
   padding-bottom: 9px;
 }
 
+.accordion__list-item a {
+  color: #ffffff;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
 .accordion__list-item a.focus-visible:focus {
-  opacity: 0.9;
+  color: #00b2ff;
 }
 
 .popup {
@@ -1598,6 +1651,9 @@ form button[type=submit].focus-visible:focus {
   border-radius: 3px;
   background-color: #019bdf;
   padding: 12px 0 15px 15px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .popup input::-webkit-input-placeholder {
@@ -1641,7 +1697,7 @@ form button[type=submit].focus-visible:focus {
 }
 
 .popup input.focus-visible:focus {
-  border-color: #ffd801;
+  border-color: #ffffff;
 }
 
 .popup form {
@@ -1677,10 +1733,13 @@ form button[type=submit].focus-visible:focus {
 .popup form textarea {
   padding: 22px 0 88px 15px;
   margin: 0;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .popup form textarea.focus-visible:focus {
-  border: 1px solid #ffd801;
+  border: 1px solid #ffffff;
 }
 
 .popup form button[type=submit] {
@@ -1690,7 +1749,7 @@ form button[type=submit].focus-visible:focus {
 }
 
 .popup form button[type=submit].focus-visible:focus {
-  color: #ffd801;
+  opacity: 0.5;
 }
 
 .popup__form-agree {
@@ -1721,12 +1780,14 @@ form button[type=submit].focus-visible:focus {
   -moz-appearance: none;
   appearance: none;
   padding: 0;
+  border: none;
   position: absolute;
   width: 15px;
   height: 15px;
   top: 5px;
   margin-left: -28px;
   background: url("../img/sprite/checkbox.svg") 0 0 no-repeat;
+  cursor: pointer;
 }
 
 .popup__form-agree input:checked {
@@ -2302,9 +2363,6 @@ form button[type=submit].focus-visible:focus {
   .accordion__wrapper {
     overflow: hidden;
     max-height: 0;
-    -webkit-transition: 0.3s max-height ease-out;
-    -o-transition: 0.3s max-height ease-out;
-    transition: 0.3s max-height ease-out;
   }
 
   .accordion__wrapper.no-js {
@@ -2410,28 +2468,28 @@ form button[type=submit].focus-visible:focus {
 
 @media (hover: hover) {
   .modal__close-btn:hover:not(.focus-visible) {
-    fill: #ffd801;
+    opacity: 0.5;
   }
 
   .menu__text:hover:not(.focus-visible) {
-    opacity: 0.9;
+    color: #00b2ff;
   }
 
   .menu__button:hover:not(.focus-visible) {
-    opacity: 0.9;
-  }
-
-  .menu__email-icon:hover:not(.focus-visible),
-  .menu__phone-icon:hover:not(.focus-visible) {
-    fill: #ffd801;
+    border-color: #00b2ff;
+    color: #00b2ff;
   }
 
   .promo__button:hover:not(.focus-visible) {
-    opacity: 0.9;
+    opacity: 0.5;
   }
 
   .about__button:hover:not(.focus-visible) {
-    opacity: 0.9;
+    opacity: 0.5;
+  }
+
+  .products__btn:hover:not(.focus-visible) {
+    opacity: 0.5;
   }
 
   .form__field input:hover:not(.focus-visible) {
@@ -2443,27 +2501,31 @@ form button[type=submit].focus-visible:focus {
   }
 
   form button[type=submit]:hover:not(.focus-visible) {
-    opacity: 0.9;
+    opacity: 0.5;
+  }
+
+  .form__agree input:hover:not(.focus-visible) {
+    cursor: pointer;
   }
 
   .social-list__item svg:hover:not(.focus-visible) {
-    opacity: 0.9;
+    fill: #00b2ff;
   }
 
   .accordion__list-item a:hover:not(.focus-visible) {
-    opacity: 0.9;
+    color: #00b2ff;
   }
 
   .popup input:hover:not(.focus-visible) {
-    border-color: #ffd801;
+    border-color: #ffffff;
   }
 
   .popup form textarea:hover:not(.focus-visible) {
-    border: 1px solid #ffd801;
+    border: 1px solid #ffffff;
   }
 
   .popup form button[type=submit]:hover:not(.focus-visible) {
-    color: #ffd801;
+    opacity: 0.5;
   }
 }
 

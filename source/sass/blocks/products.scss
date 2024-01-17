@@ -20,6 +20,7 @@
     size: 36px;
     weight: 400;
   }
+
   line-height: 50px;
   color: $color-default-white;
   margin: 0;
@@ -120,6 +121,7 @@
     size: 20px;
     weight: 400;
   }
+
   line-height: 30px;
   color: $color-default-white;
   padding: 47px 137px 0 40px;
@@ -147,6 +149,11 @@
   background-color: $color-deep-sky-blue;
   border-radius: 3px;
   cursor: pointer;
+  transition: .3s;
+
+  @include hover-focus {
+    opacity: .5;
+  }
 
   @media (max-width: 767px) {
     width: 40px;

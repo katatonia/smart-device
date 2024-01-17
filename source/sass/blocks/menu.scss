@@ -27,18 +27,26 @@
   }
 }
 
+.menu__contacts a {
+  display: flex;
+  align-items: center;
+}
+
 .menu__text {
   font: {
     family: $ptmono-regular;
     size: 16px;
     weight: 400;
   }
+
   line-height: 18px;
   color: $color-alice-blue;
   padding-left: 15px;
+  transition: .3s;
+  cursor: pointer;
 
   @include hover-focus {
-    opacity: .9;
+    color: $color-deep-sky-blue;
   }
 
   @media (max-width: 1023px) {
@@ -54,13 +62,15 @@
   border: 1px solid $color-alice-blue;
   padding: 10px 15px;
   background-color: transparent;
-  cursor: pointer;
   letter-spacing: 0.05em;
   word-break: break-word;
   margin-top: 7px;
+  transition: .3s;
+  cursor: pointer;
 
   @include hover-focus {
-    opacity: .9;
+    border-color: $color-deep-sky-blue;
+    color: $color-deep-sky-blue;
   }
 
   @media (max-width: 1023px) {
@@ -73,10 +83,7 @@
   width: 20px;
   height: 20px;
   fill: $color-deep-sky-blue;
-
-  @include hover-focus {
-    fill: $color-school-bus-yellow;
-  }
+  transition: .3s;
 }
 
 .menu__logo {

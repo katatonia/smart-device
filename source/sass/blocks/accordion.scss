@@ -13,10 +13,11 @@
 }
 
 .accordion__wrapper {
+  transition: .3s max-height ease-out;
+
   @media (max-width: 767px) {
     overflow: hidden;
     max-height: 0;
-    transition: 0.3s max-height ease-out;
 
     &.no-js {
       max-height: 100%;
@@ -55,13 +56,13 @@
     size: 15px;
     weight: 400;
   }
+
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   color: $color-default-white;
   padding: 10px 0 7px;
   position: relative;
-  transition: 0.3s;
   cursor: default;
 
   @media (max-width: 1023px) {
@@ -101,6 +102,7 @@
     }
 
     &--none {
+
       &::before,
       &::after {
         display: none;
@@ -115,6 +117,7 @@
     size: 16px;
     weight: 400;
   }
+
   line-height: 21px;
   color: $color-default-white;
   list-style: none;
@@ -125,10 +128,6 @@
     font-size: 14px;
     line-height: 18px;
   }
-}
-
-.accordion__list a {
-  color: $color-default-white;
 }
 
 .accordion__list-item {
@@ -147,7 +146,10 @@
 }
 
 .accordion__list-item a {
+  color: $color-default-white;
+  transition: .3s;
+
   @include hover-focus {
-    opacity: .9;
+    color: $color-deep-sky-blue;
   }
 }
